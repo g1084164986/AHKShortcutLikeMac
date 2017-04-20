@@ -3,6 +3,7 @@
 ; http://www.cnblogs.com/Bob-wei/p/5316158.html
 
 ; Win+F1 to show HotkeyList
+#MaxHotkeysPerInterval 2000
 #F1::ListHotkeys
 
 ; ## Menu ##
@@ -230,3 +231,12 @@ ConvertExplorerURLToPath(url)
     Else Break
   Return path 
 }
+
+
+WheelUP::
+Send {WheelDown}
+Return
+
+WheelDown::
+Send {WheelUp}
+Return
